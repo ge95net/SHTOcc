@@ -1,0 +1,57 @@
+SemanticKITTI semantic scene completion training data
+=====================================================
+
+Version: 1.1
+
+See http://www.semantic-kitti.org for more information on the dataset and updates.
+
+
+Change Log
+----------
+Version 1.1: regenerated due to bug in voxelizer, see https://github.com/PRBonn/semantic-kitti-api/issues/49
+Version 1.0: initial release.
+
+
+Contents
+--------
+
+This archive contains the voxelized input for sequences 00-21 of the KITTI odemetry 
+benchmark (.bin files). We provide for the trainig set 00-11 also the labels of the 
+completed scene (.label files), the invalid (.invalid files) and occluded masks 
+(.occluded files), which can be used for training purposes.
+
+See http://www.semantic-kitti.org/dataset.html#format for more information on 
+the data format. We also provide Python code to read and visualize the data, 
+which is available under http://www.semantic-kitti.org/resources.html#devtools.
+
+
+License
+-------
+
+Our dataset is based on the KITTI Vision Benchmark and therefore we distribute
+the data under Creative Commons Attribution-NonCommercial-ShareAlike licence. 
+You are free to share and adapt the data, but have to give appropriate credit 
+and may not use the work for commercial purposes.
+
+Specifically you should cite our work:
+
+@inproceedings{behley2019iccv,
+    author = {J. Behley and M. Garbade and A. Milioto and J. Quenzel 
+              and S. Behnke and C. Stachniss and J. Gall},
+    title = {{SemanticKITTI: A Dataset for Semantic Scene Understanding of LiDAR Sequences}},
+    booktitle = {Proc.~of the IEEE International Conf. on Computer Vision (ICCV)},
+    year = {2019}}
+
+But also cite the original KITTI Vision Benchmark:
+
+@inproceedings{geiger2012cvpr,
+    author = {A. Geiger and P. Lenz and R. Urtasun},
+    title = {{Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite}},
+    booktitle = {Proc.~of the IEEE Conf.~on Computer Vision and Pattern Recognition (CVPR)},
+    pages = {3354--3361},
+    year = {2012}}
+
+
+See http://www.semantic-kitti.org/dataset.html#licence for more information on
+the licence.
+
