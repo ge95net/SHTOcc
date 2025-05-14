@@ -13,3 +13,8 @@
 Following the ReadMe file in each folder:
 - [SHTOcc-SparseOcc](SHTOcc-SparseOcc/README.md)
 - [SHTOcc-Symphonies](SHTOcc-Symphonies/README.md)
+
+
+## Acknowledgement
+
+This project is developed based on the following open-sourced projects: [SparseOcc](https://github.com/VISION-SJTU/SparseOcc), [Symphonies](https://github.com/hustvl/Symphonies/tree/main), [Occformer](https://github.com/zhangyp15/OccFormer), [OccFormer](https://github.com/zhangyp15/OccFormer), [COTR](https://github.com/NotACracker/COTR?tab=readme-ov-file). Thanks for their excellent work.
