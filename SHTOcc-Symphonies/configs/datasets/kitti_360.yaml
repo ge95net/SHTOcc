@@ -1,0 +1,24 @@
+# @package _global_
+
+data:
+  datasets:
+    type: KITTI360
+    splits: [train, val, test]
+    data_root: /horizon-bucket/mono/user/haoyi.jiang/data/kitti_360
+    label_root: /horizon-bucket/mono/user/haoyi.jiang/data/kitti_360/labels
+    depth_root: /horizon-bucket/mono/user/haoyi.jiang/data/kitti_360/depth
+    frustum_size: 8
+  loader:
+    batch_size: 1
+    num_workers: 4
+
+model:
+  channels: 64
+  scene_size: [256, 256, 32]
+  volume_scale: 2
+  num_classes: 19
+  image_shape: [376, 1408]
+
+evaluator:
+  type: SSCMetrics
+  num_classes: 19

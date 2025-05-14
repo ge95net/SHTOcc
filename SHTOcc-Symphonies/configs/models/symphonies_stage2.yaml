@@ -1,0 +1,23 @@
+# @package _global_
+
+model:
+  type: Symphonies
+  embed_dims: 128
+  num_layers: 3
+  #pc_range: [-2, 0, -1, 2, 4, 1]
+  view_scales: [4, 8, 16]
+  use_hvm: True
+
+
+  encoder:
+    type: MMDetWrapper
+    config_path: maskdino/configs/maskdino_r50_8xb2-panoptic-export.py
+    custom_imports: maskdino
+    checkpoint_path: ckpts/maskdino_r50_50e_300q_panoptic_pq53.0.pth
+  
+  criterions: [ce_ssc_re,sem_scal, geo_scal,hvm_loss] #, frustum]
+
+optimizer:
+  paramwise_cfg:
+    - name: encoder.model
+      lr_mult: 0.1

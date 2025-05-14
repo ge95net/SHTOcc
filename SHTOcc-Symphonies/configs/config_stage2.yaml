@@ -1,0 +1,35 @@
+# Refer to Hydra documentation for more information about config group defaults.
+# - https://hydra.cc/docs/tutorials/basic/your_first_app/defaults/
+# - https://hydra.cc/docs/patterns/configuring_experiments/
+
+defaults:
+  #- datasets: scannet_v02_2cm
+  #- datasets: nyu_v2
+  
+  - datasets: semantic_kitti
+  #- models: gaussianformer
+  
+  - models: symphonies_stage2
+  #- models: symphonies_sparseocc
+  #- pretrained_model: symphonies
+  - schedules: adamw_lr2e-3_30e
+  #
+  - _self_
+
+hydra:
+  mode: MULTIRUN  # refer to https://github.com/Lightning-AI/lightning/pull/11617
+  sweep:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M}
+
+trainer:
+  devices: 4
+  accelerator: gpu
+  #strategy: ddp
+  sync_batchnorm: True
+  # precision: 16-mixed
+  
+ckpt_path:  outputs/version_1-8/e29_miou0.1415.ckpt
+path: outputs/NYUv2
+voxel_backbone: symphonies
+pre_trained_weights: outputs/SemanticKITTI_8cm/e27_miou0.1604.ckpt
+phase: stage_2
