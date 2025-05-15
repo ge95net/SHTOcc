@@ -14,7 +14,7 @@ Following the ReadMe file in each folder:
 - [SHTOcc-SparseOcc](SHTOcc-SparseOcc/README.md)
 - [SHTOcc-Symphonies](SHTOcc-Symphonies/README.md)
 - [SHTOcc-COTR](SHTOcc-COTR/README.md)
-- [SHTOcc-Occformer](SHTOcc-Occformer/README.md)
+- [SHTOcc-OccFormer](SHTOcc-OccFormer/README.md)
 
 ## Acknowledgement
 
